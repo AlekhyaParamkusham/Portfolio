@@ -31,8 +31,8 @@ const Home = () => {
           style={{background: "linear-gradient(90deg, rgba(72,71,79,1) 4%, rgba(83,82,89,1) 13%, rgba(145,142,142,1) 23%, rgba(125,97,100,1) 80%, rgba(103,89,93,1) 86%)"}}
         >
           <div className="flex items-center justify-center w-full h-full flex-col border border-dashed p-2 bg-white rounded-md">
-            <Navbar />
-            <div className="flex flex-col items-center justify-center w-full h-full md:flex-row gap-3">
+//             <Navbar />
+            <div className="flex flex-col items-center justify-center w-full h-5/6 md:h-full md:flex-row gap-3">
               <div className="flex flex-1 flex-col items-center justify-center gap-3">
                 <h1
                   className="text-3xl lg:text-5xl tracking-wider font-medium capitalize font-mono text-rose-600"
