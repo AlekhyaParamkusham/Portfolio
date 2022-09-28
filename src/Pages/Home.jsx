@@ -25,7 +25,7 @@ const Home = () => {
 
       <div className="flex-col">
         <div
-          className="flex items-center justify-center w-full h-screen p-10 text-center"
+          className="flex items-center justify-center w-full h-full p-10 text-center"
           // style={{ background: "#F6F6F6" }}
           // style={{ background: "#4A403A" }}
           style={{background: "linear-gradient(90deg, rgba(72,71,79,1) 4%, rgba(83,82,89,1) 13%, rgba(145,142,142,1) 23%, rgba(125,97,100,1) 80%, rgba(103,89,93,1) 86%)"}}
