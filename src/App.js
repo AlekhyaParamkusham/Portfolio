@@ -9,7 +9,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route exact path="/projects" element={<Projects />} />
         </Routes>
       </Router>
     </>

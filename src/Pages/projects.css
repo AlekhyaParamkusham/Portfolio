@@ -1,0 +1,88 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 4px;
+  border: 1px solid #d8d8d8;
+  font-size: 12px;
+  background-color: white;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: -30px;
+  left: 80%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex: 25%;
+  max-width: 16%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 4px 10px 5px 0px rgba(199, 191, 191, 0.51);
+  -webkit-box-shadow: 4px 10px 5px 0px rgba(199, 191, 191, 0.51);
+  -moz-box-shadow: 4px 10px 5px 0px rgba(199, 191, 191, 0.51);
+}
+
+.shadowProp {
+  box-shadow: 10px 10px 5px 0px rgba(232, 221, 221, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(232, 221, 221, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(232, 221, 221, 0.75);
+}
+
+.glass {
+  /* From https://css.glass */
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  background-color: rgba(192, 183, 183, 0.26);
+  border-radius: 12px;
+  /* border: 1px solid rgba(209, 213, 219, 0.3); */
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+  .column {
+    flex: 20%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+  .column {
+    flex: 30%;
+    max-width: 30%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 480px) {
+  .column {
+    flex: 100%;
+    max-width: 50%;
+  }
+}

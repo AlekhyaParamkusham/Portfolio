@@ -2,12 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BiHomeSmile } from "react-icons/bi";
 
-import live from "./../Images/live.png";
-import git from "./../Images/git.png";
+import live from "./../Images/click.png";
+import git from "./../Images/github.png";
 
 import { db } from "./../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Loading from "../components/Loading";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./projects.css";
 
 const Projects = () => {
   const [values, setValues] = useState([]);
@@ -27,6 +31,7 @@ const Projects = () => {
           githubURL: vals.githubURL,
           tech: vals.tech,
           id: doc.id,
+          ID: vals.ID,
         });
       });
       setValues(arr);
@@ -51,137 +56,197 @@ const Projects = () => {
 
     fetchData();
     fetchData1();
+    AOS.init({
+      duration: 2000,
+    });
   }, []);
 
   return (
     <>
-       {loading ? (
-          <Loading />
-        ) : (
-      <div className="flex justify-center items-center flex-col">
+      {loading ? (
+        <Loading />
+      ) : (
         <div
-          className="flex justify-center items-center w-full h-20 p-4 gap-7"
-          style={{ background: "#433D3C" }}
+          className="flex justify-center items-center flex-col  p-4 md:p-10"
+          id="projects"
+          style={{ background: "#EEEEEE" }}
         >
-          <li
-            style={{ background: "#B2B1B9" }}
-            className="flex justify-center items-center text-left cursor-pointer capitalize p-2 rounded-full text-white hover:bg-gray-200 hover:text-black hover:duration-300 hover:scale-105"
-          >
-            <Link to="/">
-              <BiHomeSmile size={28} />
-            </Link>
-          </li>
-          <h2
-            className="flex justify-center items-center text-3xl tracking-widest font-extrabold text-white"
-            style={{ fontFamily: "Amatic SC" }}
-          >
-            PROJECTS
-          </h2>
-        </div>
+          <div className="flex flex-col  justify-center items-center w-full  bg-white p-6 ">
+            <h1 className="text-2xl tracking-wider font-bold text-red-500 ">
+              PROJECTS
+            </h1>
 
-     
-          <div className="justify-items-center items-center w-full h-full  p-16 gap-8 grid  grid-cols-1 md:grid-cols-2">
-            {values.map((project) => (
-              <div
-                className="flex justify-center items-center lg:w-5/6 flex-col pb-4 rounded-2xl shadow-2xl"
-                style={{ background: "#FEFBE7" }}
-                key={project.id}
-              >
-                <img
-                  src={project.image}
-                  className="w-full hover:-translate-y-2 cursor-pointer hover:opacity-90"
-                  style={{ transition: "all 0.3s ease-in-out" }}
-                />
-                <div className="flex justify-center items-center p-5 text-center">
-                  <ul className="flex gap-3 justify-center items-center text-xs text-white">
-                    {project.tech.map((val) => (
-                      <li className="py-1 px-2 rounded-2xl bg-gray-200 text-gray-900 italic ">
-                        {val}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex justify-center items-center w-max px-4 gap-3 ">
-                  <button>
-                    <a href={project.liveURL} target="_blank" rel="noreferrer">
-                      <img className="w-16 h-16 hover:scale-110" src={live} />
-                    </a>
-                  </button>
-
-                  <button>
+            <div className="justify-items-center items-center w-full h-full flex-col p-16 gap-8 grid  grid-cols-1 md:grid-cols-2  bg-white">
+              {values
+                .sort((a, b) => a.ID - b.ID)
+                .map((project) => (
+                  <div
+                    className="flex justify-center items-center lg:w-5/6 flex-col pb-4  shadow-2xl"
+                    style={{ background: "#FEFBE7" }}
+                    key={project.id}
+                  >
                     <a
-                      href={project.githubURL}
+                      href={project.liveURL}
                       target="_blank"
                       rel="noreferrer"
+                      data-aos="zoom-in-up"
+                      data-aos-duration="3000"
                     >
-                      <img className="w-12 h-12 hover:scale-110" src={git} />
+                     
+                      <img
+                        src={project.image}
+                        className="w-full hover:-translate-y-2 cursor-pointer hover:opacity-90"
+                        style={{ transition: "all 0.3s ease-in-out" }}
+                      />
                     </a>
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-   
 
-        <div className=" flex justify-center items-center flex-col p-4 mb-5">
-          <button
-            className="flex justify-center items-center p-3 bg-gray-800  text-white tracking-widest text-xl md:text-2xl rounded-lg"
-            style={{fontFamily: 'Amatic SC'}}
-            onClick={() => setShow(!show)}
-          >
-            {show ? `Hide projects` : `More projects`}
-          </button>
-          {show && (
-            <div className="justify-items-center items-center w-full h-full  p-16 gap-8 grid  grid-cols-1 md:grid-cols-2">
-              {values1.map((project) => (
-                <div
-                  className="flex justify-center items-center lg:w-5/6 flex-col pb-4 rounded-2xl shadow-2xl"
-                  style={{ background: "#FEFBE7" }}
-                  key={project.id}
-                >
-                  <img
-                    src={project.image}
-                    className="w-full hover:-translate-y-2 cursor-pointer hover:opacity-90"
-                    style={{ transition: "all 0.3s ease-in-out" }}
-                  />
-                  <div className="flex justify-center items-center p-5 text-center">
-                    <ul className="flex gap-3 justify-center items-center text-xs text-white">
-                      {project.tech.map((val) => (
-                        <li className="py-1 px-2 rounded-2xl bg-gray-200 text-gray-900 italic ">
-                          {val}
-                        </li>
+                    <div className="flex justify-center items-center p-4 text-center gap-3 m-2 ">
+                      {project.tech.map(({ name, url }) => (
+                        <div className="tooltip">
+                          <img
+                            src={url}
+                            alt={name}
+                            className="w-12 h-12 hover:scale-110 border p-1 rounded-lg shadow-lg"
+                          />
+                          <span className="tooltiptext">{name}</span>
+                        </div>
                       ))}
-                    </ul>
-                  </div>
-                  <div className="flex justify-center items-center w-max px-4 gap-3 ">
-                    <button>
-                      <a
-                        href={project.liveURL}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img className="w-16 h-16 hover:scale-110" src={live} />
-                      </a>
-                    </button>
+                    </div>
+                    <div className="flex justify-center items-center w-max px-4 gap-6 ">
+                      <button>
+                        <a
+                          href={project.liveURL}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex justify-center items-center gap-1"
+                        >
+                          <img
+                            className="w-12 h-12 hover:scale-110"
+                            src={live}
+                          />
+                          <p
+                            className="text-sm font-semibold font-mono border-b hover:border-b-2 hover:border-red-600 hover:tracking-wider"
+                            style={{ color: "#FF5B00" }}
+                          >
+                            Visit Website
+                          </p>
+                        </a>
+                      </button>
 
-                    <button>
-                      <a
-                        href={project.githubURL}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img className="w-12 h-12 hover:scale-110" src={git} />
-                      </a>
-                    </button>
+                      <button>
+                        <a
+                          href={project.githubURL}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex justify-center items-center gap-1 "
+                        >
+                          <img className="w-8 h-8 hover:scale-110 " src={git} />
+                          <p
+                            className="text-sm font-semibold font-mono border-b hover:border-b-2 hover:border-red-600 hover:tracking-wider"
+                            style={{ color: "#FF5B00" }}
+                          >
+                            View code
+                          </p>
+                        </a>
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
-          )}
+
+            <div className=" flex justify-center items-center flex-col py-6 mb-5 w-full  bg-white ">
+              {show && (
+                <div className="justify-items-center items-center w-full h-full  p-16 gap-8 grid  grid-cols-1 md:grid-cols-2">
+                  {values1.map((project) => (
+                    <div
+                      className="flex justify-center items-center lg:w-5/6 flex-col pb-4  shadow-2xl"
+                      style={{ background: "#FEFBE7" }}
+                      key={project.id}
+                    >
+                       <a
+                      href={project.liveURL}
+                      target="_blank"
+                      rel="noreferrer"
+                      data-aos="zoom-in-up"
+                      data-aos-duration="2000"
+                    > <img
+                        src={project.image}
+                        className="w-full hover:-translate-y-2 cursor-pointer hover:opacity-90"
+                        style={{ transition: "all 0.3s ease-in-out" }}
+                      /></a>
+                     
+                      <div className="flex justify-center items-center p-4 text-center gap-3 m-2">
+                        {project.tech.map(({ name, url }) => (
+                          <div className="tooltip">
+                            <img
+                              src={url}
+                              alt={name}
+                              className="w-12 h-12 hover:scale-110 border p-1 rounded-lg shadow-lg"
+                            />
+                            <span className="tooltiptext">{name}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex justify-center items-center w-max px-4 gap-6 ">
+                        <button>
+                          <a
+                            href={project.liveURL}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex justify-center items-center gap-1"
+                   
+                          >
+                            <img
+                              className="w-12 h-12 hover:scale-110"
+                              src={live}
+                            />
+                            <p
+                              className="text-sm font-semibold font-mono border-b hover:border-b-2 hover:border-red-600 hover:tracking-wider"
+                              style={{ color: "#FF5B00" }}
+                            >
+                              Visit Website
+                            </p>
+                          </a>
+                        </button>
+
+                        <button>
+                          <a
+                            href={project.githubURL}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex justify-center items-center gap-1 "
+                          >
+                            <img
+                              className="w-8 h-8 hover:scale-110 "
+                              src={git}
+                            />
+                            <p
+                              className="text-sm font-semibold font-mono border-b hover:border-b-2 hover:border-red-600 hover:tracking-wider"
+                              style={{ color: "#FF5B00" }}
+                            >
+                              View code
+                            </p>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <button
+                className="flex justify-center items-center p-3 bg-gray-800  text-white tracking-widest text-xl md:text-2xl rounded-lg"
+                style={{ fontFamily: "Amatic SC" }}
+                id="myBtn"
+                onClick={() => {
+                  setShow(!show);
+                }}
+              >
+                {show ? `Hide projects` : `More projects`}
+              </button>
+            </div>
+          </div>
         </div>
-        
-      </div>
-           )}
+      )}
     </>
   );
 };
