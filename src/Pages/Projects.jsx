@@ -76,12 +76,12 @@ const Projects = () => {
               PROJECTS
             </h1>
 
-            <div className="justify-items-center items-center w-full h-full flex-col p-16 gap-8 grid  grid-cols-1 md:grid-cols-2  bg-white">
+            <div className="justify-items-center items-center w-full h-full flex-col md:px-2 p-8 lg:p-16 md:gap-4 gap-8 grid  grid-cols-1 md:grid-cols-2  bg-white">
               {values
                 .sort((a, b) => a.ID - b.ID)
                 .map((project) => (
                   <div
-                    className="flex justify-center items-center lg:w-5/6 flex-col pb-4  shadow-2xl"
+                    className="flex justify-center items-center md:w-11/12 lg:w-5/6 flex-col pb-4  shadow-2xl"
                     style={{ background: "#FEFBE7" }}
                     key={project.id}
                   >
@@ -112,7 +112,7 @@ const Projects = () => {
                         </div>
                       ))}
                     </div>
-                    <div className="flex justify-center items-center w-max px-4 gap-6 ">
+                    <div className="flex justify-center items-center w-max px-4 md:gap-4 gap-6 ">
                       <button>
                         <a
                           href={project.liveURL}
@@ -156,10 +156,10 @@ const Projects = () => {
 
             <div className=" flex justify-center items-center flex-col py-6 mb-5 w-full  bg-white ">
               {show && (
-                <div className="justify-items-center items-center w-full h-full  p-16 gap-8 grid  grid-cols-1 md:grid-cols-2">
+            <div className="justify-items-center items-center w-full h-full flex-col md:px-2 p-8 lg:p-16 md:gap-4 gap-8 grid  grid-cols-1 md:grid-cols-2  bg-white">
                   {values1.map((project) => (
                     <div
-                      className="flex justify-center items-center lg:w-5/6 flex-col pb-4  shadow-2xl"
+                    className="flex justify-center items-center md:w-11/12 lg:w-5/6 flex-col pb-4  shadow-2xl"
                       style={{ background: "#FEFBE7" }}
                       key={project.id}
                     >
@@ -187,7 +187,7 @@ const Projects = () => {
                           </div>
                         ))}
                       </div>
-                      <div className="flex justify-center items-center w-max px-4 gap-6 ">
+                      <div className="flex justify-center items-center w-max px-4 md:gap-4 gap-6">
                         <button>
                           <a
                             href={project.liveURL}
