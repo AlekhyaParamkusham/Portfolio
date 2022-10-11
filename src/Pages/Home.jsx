@@ -56,7 +56,7 @@ const Home = () => {
                     Full Stack Developer
                     
                   </p>
-                  <p className="text-xs lg:text-md text-gray-800 lg:tracking-wider font-mono text-center lg:text-left" >Passionate about building efficient, user-friendly and responsive websites. </p>
+                  <p className="text-xs lg:text-md text-gray-800 lg:tracking-wider font-mono text-center md:text-left" >Passionate about building efficient, user-friendly and responsive websites. </p>
                   <a href="#projects">
                     <button className="flex  justify-center items-center bg-gray-600  gap-1 md:gap-2  text-white px-4 py-2 text-xs md:text-sm rounded-full mt-3 md:mt-10 tracking-wider hover:bg-gray-200 hover:text-black hover:border hover:border-gray-400 hover:font-semibold hover:border-dashed">
                       Projects <MdOutlineDoubleArrow />
