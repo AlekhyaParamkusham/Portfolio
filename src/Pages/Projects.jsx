@@ -82,7 +82,8 @@ const Projects = () => {
                 .map((project) => (
                   <div
                     className="flex justify-center items-center md:w-11/12 lg:w-5/6 flex-col pb-4  shadow-2xl"
-                    style={{ background: "#FEFBE7" }}
+                    // style={{ background: "#FEFBE7" }}
+                     style={{backgroundColor:"#FAF7F0"}}
                     key={project.id}
                   >
                     <a
@@ -160,7 +161,8 @@ const Projects = () => {
                   {values1.map((project) => (
                     <div
                     className="flex justify-center items-center md:w-11/12 lg:w-5/6 flex-col pb-4  shadow-2xl"
-                      style={{ background: "#FEFBE7" }}
+                      // style={{ background: "#FEFBE7" }}
+                      style={{backgroundColor:"#FAF7F0"}}
                       key={project.id}
                     >
                        <a
