@@ -32,13 +32,13 @@ const Home = () => {
         <Navbar />
         <div className="flex-col absolute z-0">
           <div
-            className="flex items-center justify-center w-full lg:h-screen h-5/6 p-8 md:p-16 text-center"
+            className="flex items-center justify-center w-full h-screen  p-8 md:p-16 text-center"
             style={{
               background:
                 "linear-gradient(90deg, rgba(72,71,79,1) 4%, rgba(83,82,89,1) 13%, rgba(145,142,142,1) 23%, rgba(125,97,100,1) 80%, rgba(103,89,93,1) 86%)",
             }}
           >
-            <div className="myCSS flex items-center justify-center w-full flex-col p-2 bg-white">
+            <div className="myCSS flex items-center justify-center h-full w-full flex-col p-2 bg-white">
               <div className="flex flex-col items-center justify-center w-full h-full md:flex-row gap-3">
                 <div className="flex flex-1 flex-col items-center md:items-start justify-center gap-3 md:p-10">
                   <h1
