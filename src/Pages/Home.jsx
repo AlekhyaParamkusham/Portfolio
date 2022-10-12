@@ -50,20 +50,23 @@ const Home = () => {
                   >
                     Alekhya Paramkusham
                   </h1>
-                  <p className="text-md lg:text-lg text-gray-600 tracking-wider" data-aos="fade-in"
+                  <h3 className="text-lg lg:text-2xl font-medium text-gray-600 tracking-wider" data-aos="fade-in"
                     data-aos-delay="6000"
                     data-aos-duration="3000">
                     Full Stack Developer
                     
-                  </p>
-                  <p className="text-xs lg:text-md text-gray-800 lg:tracking-wider font-mono text-center md:text-left" >Passionate about building efficient, user-friendly and responsive websites. </p>
+                  </h3>
+                  <p className="text-sm lg:text-md text-gray-800 lg:tracking-wider font-mono text-center md:text-left" >Passionate about building efficient, user-friendly and responsive websites. </p>
+                 <p className="text-sm lg:text-md text-gray-800 lg:tracking-wider  text-center md:text-left md:mt-4 font-mono" >Got a moment? Check my projects below! </p>
+
+                 
                   <a href="#projects">
-                    <button className="flex  justify-center items-center bg-gray-600  gap-1 md:gap-2  text-white px-4 py-2 text-xs md:text-sm rounded-full mt-3 md:mt-10 tracking-wider hover:bg-gray-200 hover:text-black hover:border hover:border-gray-400 hover:font-semibold hover:border-dashed">
+                    <button className="flex  justify-center items-center bg-gray-600  gap-1 md:gap-2  text-white px-4 py-2 text-xs md:text-sm rounded-full md:mt-2 tracking-wider hover:bg-gray-200 hover:text-black hover:border hover:border-gray-400 hover:font-semibold hover:border-dashed">
                       Projects <MdOutlineDoubleArrow />
                     </button>
                   </a>
                 </div>
-                <div className="flex flex-1 flex-col items-center justify-center p-4 gap-2 md:gap-4" >
+                <div className="flex flex-1 flex-col items-center justify-center p-2 gap-2 md:gap-4" >
                   <img
                     src={Profile}
                     alt="Profile"
@@ -93,7 +96,9 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+            
             </div>
+
           </div>
           <About />
           <Experience />
