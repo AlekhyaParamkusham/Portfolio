@@ -30,3 +30,9 @@
     height: 80%;
   }
 }
+
+li::first-letter {
+  color: black;
+  font-size: medium;
+  font-weight: 500;
+}

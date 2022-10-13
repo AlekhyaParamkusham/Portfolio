@@ -25,7 +25,7 @@ const Skills = () => {
 
         <div className="row">
           {skillsData.map((ele) => (
-            <div className="column" data-aos="fade-in" data-aos-duration="2000" style={{background:"#F9F9F9"}}>
+            <div className="column bg-white" data-aos="fade-in" data-aos-duration="2000" >
               <img className="flex w-1/2" src={ele.url} />
               <p className="flex md:tracking-wider text-sm text-center">
                 {ele.name}

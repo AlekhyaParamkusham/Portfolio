@@ -56,8 +56,8 @@ const Home = () => {
                     Full Stack Developer
                     
                   </h3>
-                  <p className="text-sm lg:text-md text-gray-800 lg:tracking-wider font-mono text-center md:text-left" >Passionate about building efficient, user-friendly and responsive websites. </p>
-                 <p className="text-sm lg:text-md text-gray-800 lg:tracking-wider  text-center md:text-left md:mt-4 font-mono" >Got a moment? Check my projects below! </p>
+                  <p className="text-sm lg:text-md text-gray-800 lg:tracking-wider text-center md:text-left"  style={{ fontFamily: "Barlow"}}>Passionate about building efficient, user-friendly and responsive websites. </p>
+                 <p className="text-sm lg:text-md text-gray-800 lg:tracking-wider  text-center md:text-left md:mt-4 "  style={{ fontFamily: "Barlow"}} >Got a moment? Check my projects below! </p>
 
                  
                   <a href="#projects">
@@ -77,19 +77,19 @@ const Home = () => {
                   <div className="flex items-center justify-center gap-1 md:gap-2 w-5/6 md:w-1/2">
                     <p
                       style={{ fontFamily: "Bebas Neue" }}
-                      className="text-md md:text-xl text-gray-800 px-1 py-1 border-b border-b-red-400 cursor-pointer hover:text-gray-600 hover:tracking-wider" 
+                      className="text-md md:text-xl text-gray-800 px-1 py-1 border-b border-b-red-400 cursor-pointer hover:text-gray-600 hover:tracking-wider " 
                     >
                      <a target="_blank" href="mailto:paramkushamalekhya@gmail.com" rel="noreferrer">Email Me</a>
                     </p>
                     <span className="p-1">  •  </span>
                     <ul className="flex p-1 gap-3 items-center justify-center ">
-                      <li className="p-3 rounded-full bg-stone-300 cursor-pointer hover:scale-110 hover:bg-stone-200">
+                      <li className="p-3 rounded-full bg-stone-300 cursor-pointer hover:scale-110 ">
                         <a
                           target="_blank"
                           href="https://www.linkedin.com/in/paramkusham-alekhya-2a7556115/"
                           rel="noreferrer"
                         >
-                          <BsLinkedin  size={16}/>
+                          <BsLinkedin  size={16} style={{background: "white"}}/>
                         </a>
                       </li>
                     </ul>

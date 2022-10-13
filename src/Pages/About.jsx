@@ -5,7 +5,7 @@ const About = () => {
     <>
       <div
         id="about"
-        className="flex justify-center items-center my-6 p-6 bg-white "
+        className="flex justify-center items-center my-6 p-6 md:p-10 bg-white "
       >
         <div
           className="flex flex-col justify-center items-center lg:w-5/6 p-5 lg:py-6 lg:px-10 gap-4 "
@@ -48,18 +48,18 @@ const About = () => {
             <div className="flex flex-1 flex-col items-center  p-2 gap-8 border-t md:border-t-0 md:border-l border-dashed md:border-gray-500 h-full">
               <div className="flex flex-1 flex-col justify-center items-center md:items-start w-full pt-6 p-2 lg:p-3 gap-2">
                 <h2
-                  className="text-md font-semibold text-slate-600 tracking-wide uppercase p-1"
+                  className="text-lg font-semibold text-slate-600 tracking-wider uppercase p-1"
                   style={{ background: "#F0EBE3" }}
                 >
                   Education
                 </h2>
                 <p
                   style={{ fontFamily: "Barlow" }}
-                  className="text-sm md:tracking-wide text-center lg:text-right"
+                  className="text-md md:tracking-wide text-center lg:text-right"
                 >
                   Electronics and Communication Engg. (2013 - 2017)
                 </p>
-                <p className="italic text-xs text-gray-500 text-center lg:text-right">
+                <p className="italic text-sm text-gray-500 text-center lg:text-right">
                   G.Narayanamma Institute of Technology and Sciences
                 </p>
               </div>
