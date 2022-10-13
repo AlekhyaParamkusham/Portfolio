@@ -16,7 +16,7 @@ const About = () => {
           </h1>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-5">
-            <div className="flex flex-1 flex-col md:flex-2 justify-center items-start gap-3">
+            <div className="flex flex-1 flex-col md:flex-2 justify-center items-start gap-4 md:gap-2 ">
               <p
                 style={{ fontFamily: "Barlow"}}
                 className="text-md tracking-wide text-black  p-1 lg:p-3 "

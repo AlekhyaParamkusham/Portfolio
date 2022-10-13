@@ -14,7 +14,7 @@ const Navbar = () => {
             "linear-gradient(90deg, rgba(72,71,79,1) 4%, rgba(83,82,89,1) 13%, rgba(145,142,142,1) 23%, rgba(125,97,100,1) 80%, rgba(103,89,93,1) 86%)",
         }}
       >
-        <div className="flex md:justify-center items-start md:items-center p-3 justify-between w-full">
+        <div className="flex md:justify-center items-start md:items-center p-2 md:p-3 justify-between w-full">
           <ul className="hidden md:flex justify-center items-center gap-10 text-gray-50">
             <li
               className="flex cursor-pointer  tracking-widest  font-light text-md lg:text-lg  hover:scale-105 hover:text-rose-400"
