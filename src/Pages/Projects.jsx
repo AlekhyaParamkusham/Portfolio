@@ -67,7 +67,7 @@ const Projects = () => {
         <Loading />
       ) : (
         <div
-          className="flex justify-center items-center flex-col  p-4 md:p-10"
+          className="flex justify-center items-center flex-col p-10"
           id="projects"
           style={{ background: "#EEEEEE" }}
         >

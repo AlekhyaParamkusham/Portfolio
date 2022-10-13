@@ -5,10 +5,10 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="flex justify-center items-center  p-4 md:p-10"
+      className="flex justify-center items-center p-10"
       style={{ background: "#EEEEEE" }}
     >
-      <div className="flex flex-col  justify-center items-center w-full lg:w-11/12 bg-white p-6 lg:py-6 lg:px-10 gap-4">
+      <div className="flex flex-col  justify-center items-center w-full lg:w-11/12 bg-white p-7 lg:py-6 lg:px-10 gap-4">
         <h1 className="text-2xl tracking-wider font-bold text-red-500 mb-3 ">
           EXPERIENCE
         </h1>

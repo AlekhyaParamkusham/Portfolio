@@ -39,7 +39,7 @@ const Home = () => {
             }}
           >
             <div className="myCSS flex items-center justify-center w-full flex-col p-2 bg-white">
-              <div className="flex flex-col items-center justify-center w-full md:h-full md:flex-row gap-3 mb-5 md:mb-0">
+              <div className="flex flex-col items-center justify-center w-full md:h-full md:flex-row gap-5 md:gap-3 mb-5 md:mb-0">
                 <div className="flex flex-1 flex-col items-center md:items-start justify-center gap-3 md:p-10">
                   <h1
                     className="text-3xl lg:text-5xl tracking-wider font-medium capitalize font-mono text-rose-600"
