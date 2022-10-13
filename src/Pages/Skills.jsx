@@ -16,7 +16,7 @@ const Skills = () => {
   return (
     <div id="skills" className="flex justify-center items-center p-10">
       <div
-        className="flex flex-col justify-center items-center lg:w-5/6  p-5 lg:py-6 lg:px-10 gap-4 "
+        className="flex flex-col justify-center items-center lg:w-5/6  p-7 lg:py-6 lg:px-10 gap-4 "
         // style={{ background: "#EEF2E6" }}
         style={{ background: "#EEEEEE" }}
       >

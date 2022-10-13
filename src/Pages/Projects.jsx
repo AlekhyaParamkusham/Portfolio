@@ -71,7 +71,7 @@ const Projects = () => {
           id="projects"
           style={{ background: "#EEEEEE" }}
         >
-          <div className="flex flex-col  justify-center items-center w-full  bg-white p-6 ">
+          <div className="flex flex-col  justify-center items-center w-full  bg-white p-7 ">
             <h1 className="text-2xl tracking-wider font-bold text-red-500 ">
               PROJECTS
             </h1>

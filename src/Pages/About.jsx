@@ -8,7 +8,7 @@ const About = () => {
         className="flex justify-center items-center my-6 p-10 bg-white "
       >
         <div
-          className="flex flex-col justify-center items-center lg:w-5/6 p-6 lg:py-6 lg:px-10 gap-4 "
+          className="flex flex-col justify-center items-center lg:w-5/6 p-7 lg:py-6 lg:px-10 gap-4 "
           style={{ background: "#F6F6F6" }}
         >
           <h1 className="text-2xl tracking-wider font-bold text-red-500 mb-3">
