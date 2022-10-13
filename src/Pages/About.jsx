@@ -30,8 +30,8 @@ const About = () => {
                 className="text-md tracking-wide text-black  p-1 lg:p-3 "
               >
                 Apart from work, I find myself passionate in putting forth
-                stories via embroidery hoop art (StoryOnHoops).
-                <br />
+                stories via embroidery hoop art (@StoryOnHoops). {" "}
+                {/* <br /> */}
                 I found Web Development to be a perfect union to my interest of
                 creating user experience and coding. <br />I took time and got
                 familiar with MERN stack and put my knowledge into creating

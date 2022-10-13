@@ -76,14 +76,14 @@ const Projects = () => {
               PROJECTS
             </h1>
 
-            <div className="justify-items-center items-center w-full h-full flex-col md:px-2 p-8 lg:p-16 md:gap-4 gap-8 grid  grid-cols-1 md:grid-cols-2  bg-white">
+            <div className="justify-items-center items-center w-full h-full flex-col md:px-2 p-8 lg:p-16 md:gap-4 lg:gap-6 gap-8 grid  grid-cols-1 md:grid-cols-2  bg-white">
               {values
                 .sort((a, b) => a.ID - b.ID)
                 .map((project) => (
                   <div
                     className="flex justify-center items-center md:w-11/12 lg:w-5/6 flex-col pb-4  shadow-2xl"
                     // style={{ background: "#FEFBE7" }}
-                     style={{backgroundColor:"#FAF7F0"}}
+                    style={{ backgroundColor: "#FAF7F0" }}
                     key={project.id}
                   >
                     <a
@@ -93,7 +93,6 @@ const Projects = () => {
                       data-aos="zoom-in-up"
                       data-aos-duration="3000"
                     >
-                     
                       <img
                         src={project.image}
                         className="w-full hover:-translate-y-2 cursor-pointer hover:opacity-90"
@@ -157,26 +156,29 @@ const Projects = () => {
 
             <div className=" flex justify-center items-center flex-col py-6 mb-5 w-full  bg-white ">
               {show && (
-            <div className="justify-items-center items-center w-full h-full flex-col md:px-2 p-8 lg:p-16 md:gap-4 gap-8 grid  grid-cols-1 md:grid-cols-2  bg-white">
+                <div className="justify-items-center items-center w-full h-full flex-col md:px-2 p-8 lg:p-16 md:gap-4 gap-8 grid  grid-cols-1 md:grid-cols-2  bg-white">
                   {values1.map((project) => (
                     <div
-                    className="flex justify-center items-center md:w-11/12 lg:w-5/6 flex-col pb-4  shadow-2xl"
+                      className="flex justify-center items-center md:w-11/12 lg:w-5/6 flex-col pb-4  shadow-2xl"
                       // style={{ background: "#FEFBE7" }}
-                      style={{backgroundColor:"#FAF7F0"}}
+                      style={{ backgroundColor: "#FAF7F0" }}
                       key={project.id}
                     >
-                       <a
-                      href={project.liveURL}
-                      target="_blank"
-                      rel="noreferrer"
-                      data-aos="zoom-in-up"
-                      data-aos-duration="2000"
-                    > <img
-                        src={project.image}
-                        className="w-full hover:-translate-y-2 cursor-pointer hover:opacity-90"
-                        style={{ transition: "all 0.3s ease-in-out" }}
-                      /></a>
-                     
+                      <a
+                        href={project.liveURL}
+                        target="_blank"
+                        rel="noreferrer"
+                        data-aos="zoom-in-up"
+                        data-aos-duration="2000"
+                      >
+                        {" "}
+                        <img
+                          src={project.image}
+                          className="w-full hover:-translate-y-2 cursor-pointer hover:opacity-90"
+                          style={{ transition: "all 0.3s ease-in-out" }}
+                        />
+                      </a>
+
                       <div className="flex justify-center items-center p-4 text-center gap-3 m-2">
                         {project.tech.map(({ name, url }) => (
                           <div className="tooltip">
@@ -196,7 +198,6 @@ const Projects = () => {
                             target="_blank"
                             rel="noreferrer"
                             className="flex justify-center items-center gap-1"
-                   
                           >
                             <img
                               className="w-12 h-12 hover:scale-110"
