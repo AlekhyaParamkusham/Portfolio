@@ -24,7 +24,7 @@
 
 .logo {
   background-image: url("./../Images/paintback.png");
-  padding: 8px;
+  /* padding: 8px; */
   background-repeat: no-repeat;
   background-size: cover;
 }

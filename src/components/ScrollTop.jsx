@@ -28,7 +28,7 @@ const [visible, setVisible] = useState(false)
   window.addEventListener('scroll', toggleVisible);
 
   return (
-    <><button className='fixed w-full  right-4 bottom-5 h-16 text-2xl z-10 cursor-pointer text-white p-4 flex justify-end items-center '>
+    <><button className='fixed w-max  right-4 bottom-5 h-16 text-2xl z-10 cursor-pointer text-white p-4 flex justify-end items-center '>
      <HiChevronDoubleUp onClick={scrollToTop}  className="bg-gray-500 p-3 rounded-full"  size={44}
      style={{display: visible ? 'inline' : 'none'}} />
     </button>
