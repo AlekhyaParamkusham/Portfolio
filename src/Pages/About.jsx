@@ -16,7 +16,7 @@ const About = () => {
           </h1>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-5">
-            <div className="flex flex-1 flex-col md:flex-2 justify-center items-start">
+            <div className="flex flex-1 flex-col md:flex-2 justify-center items-start gap-3">
               <p
                 style={{ fontFamily: "Barlow"}}
                 className="text-md tracking-wide text-black  p-1 lg:p-3 "
@@ -49,7 +49,7 @@ const About = () => {
               <div className="flex flex-1 flex-col justify-center items-center md:items-start w-full pt-6 p-2 lg:p-3 gap-2">
                 <h2
                   className="text-lg font-semibold text-slate-600 tracking-wider uppercase p-1"
-                  style={{ background: "#F0EBE3" }}
+                  style={{background:"#EFEFEF"}}
                 >
                   Education
                 </h2>

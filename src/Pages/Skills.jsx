@@ -17,7 +17,8 @@ const Skills = () => {
     <div id="skills" className="flex justify-center items-center p-10">
       <div
         className="flex flex-col justify-center items-center lg:w-5/6  p-5 lg:py-6 lg:px-10 gap-4 "
-        style={{ background: "#EEF2E6" }}
+        // style={{ background: "#EEF2E6" }}
+        style={{ background: "#EEEEEE" }}
       >
         <h1 className="text-2xl tracking-wider font-bold text-red-500 mb-3">
           SKILLS
