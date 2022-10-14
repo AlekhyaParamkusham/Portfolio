@@ -1,4 +1,4 @@
-A Portfolio website built to show-case my projects and skills.
+## A Portfolio website built to show-case projects and skills.
 Website uses React for its front-end functionality while firebase is used as a database to serve the files.
 Tailwind CSS has been used for responsiveness of the site.
 
