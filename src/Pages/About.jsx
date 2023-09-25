@@ -66,7 +66,8 @@ const About = () => {
               <div className="flex flex-1 justify-center items-center flex-col md:items-start w-full p-2 lg:p-3 gap-4 ">
                
                 <p className="text-md tracking-wide text-black "  style={{ fontFamily: "Barlow" }}>Feel free to check my resume here!</p>
-                <button className="flex justify-center items-center p-2 border-2 border-black tracking-widest text-sm hover:bg-gray-700 hover:scale-105 hover:text-white hover:border-gray-700">VIEW RESUME</button>
+               <a target="_blank" href="https://drive.google.com/file/d/1fC_RxNvbSqSyddZ24HP-0edyhhLEveJV/view?usp=sharing" rel="noreferrer"><button className="flex justify-center items-center p-2 border-2 border-black tracking-widest text-sm hover:bg-gray-700 hover:scale-105 hover:text-white hover:border-gray-700">
+                  VIEW RESUME </button></a>
               </div>
             </div>
           </div>
