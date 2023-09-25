@@ -21,8 +21,8 @@ const Social = () => {
             <li className="p-3 rounded-full bg-stone-300 cursor-pointer hover:scale-110 hover:bg-stone-400">
               <a target="_blank" href="mailto:paramkushamalekhya@gmail.com" rel="noreferrer"><MdEmail /></a>
             </li>
-            <li className="p-3 rounded-full bg-stone-300 cursor-pointer hover:scale-110 hover:bg-stone-400">
-              <ImProfile />
+           <li className="p-3 rounded-full bg-stone-300 cursor-pointer hover:scale-110 hover:bg-stone-400">
+              <a target="_blank" href="https://drive.google.com/file/d/1fC_RxNvbSqSyddZ24HP-0edyhhLEveJV/view?usp=sharing" rel="noreferrer"><ImProfile /></a> 
             </li>
           </ul>
         </div>
